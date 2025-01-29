@@ -12,3 +12,4 @@ C:\Users\TBRWorld\GUACAMOLE GAMER FART\applications\mc texture packs\Sound Extra
 C:\Users\TBRWorld\GUACAMOLE GAMER FART\applications\mc texture packs\Sound Extractor\MC Sound Texture Extractor\obj\Debug\net8.0\MC Sound Texture Extractor.pdb
 C:\Users\TBRWorld\GUACAMOLE GAMER FART\applications\mc texture packs\Sound Extractor\MC Sound Texture Extractor\obj\Debug\net8.0\MC Sound Texture Extractor.genruntimeconfig.cache
 C:\Users\TBRWorld\GUACAMOLE GAMER FART\applications\mc texture packs\Sound Extractor\MC Sound Texture Extractor\obj\Debug\net8.0\ref\MC Sound Texture Extractor.dll
+C:\Users\TBRWorld\GUACAMOLE GAMER FART\applications\mc texture packs\Sound Extractor\MC Sound Texture Extractor\obj\Debug\net8.0\MC Sound Texture Extractor.sourcelink.json

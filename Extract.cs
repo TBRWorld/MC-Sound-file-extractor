@@ -98,9 +98,11 @@ namespace MC_Sound_Texture_Extractor
             //copy over all the sound files in a temp folder
             copyFiles();
 
-            //rename all the sound files to their corresponding names in <version>.json
-
             //move all the sound files to their corresponding directories
+            moveFiles();
+
+            //delete temp folder and it's contents
+            deleteTemp();
         }
 
         public void MakeList()
@@ -196,6 +198,57 @@ namespace MC_Sound_Texture_Extractor
             //copy all the sound files to the temp folder
             Console.WriteLine("Copying files to temp folder");
 
+            string[] hashFiles = Directory.GetFiles(Globals.SoundDirectory, "*.*", SearchOption.AllDirectories);
+            foreach (string file in hashFiles)
+            {
+                try
+                {
+                    string filePath = Path.Combine(tempFolder, Path.GetFileName(file));
+                    Console.WriteLine("Copying " + file + " To " + filePath);
+                    File.Copy(file, filePath);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Error copying file: " + file + ". " + e.Message);
+                }
+            }
+            Console.WriteLine("Successfully copied all files to temp folder");
+        }
+        public void moveFiles()
+        {
+            //move and rename all the sound files to their corresponding names in <version>.json
+            Console.WriteLine("Moving and renaming temp files");
+
+            foreach (SoundsData sound in soundsData)
+            {
+                string oldFilePath = Path.Combine(Globals.OutputFolder, "temp", sound.hash);
+                string newFilePath = Path.Combine(Globals.OutputFolder, sound.folderPath, sound.name);
+                try
+                {
+                    Console.WriteLine("Moving " + oldFilePath + " To " + newFilePath);
+                    File.Move(oldFilePath, newFilePath);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Error moving file: " + oldFilePath + ". " + e.Message);
+                }
+            }
+            Console.WriteLine("Successfully moved all files");
+        }
+        public void deleteTemp()
+        {
+            //delete temp folder
+            Console.WriteLine("Deleting temp folder");
+            string tempFolder = Path.Combine(Globals.OutputFolder, "temp");
+            try
+            {
+                Directory.Delete(tempFolder, true);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error deleting temp folder: " + tempFolder + ". " + e.Message);
+            }
+            Console.WriteLine("Successfully deleted temp folder");
         }
     }
 }
