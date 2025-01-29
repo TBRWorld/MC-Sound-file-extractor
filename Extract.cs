@@ -237,7 +237,7 @@ namespace MC_Sound_Texture_Extractor
         }
         public void deleteTemp()
         {
-            //delete temp folder
+            //delete temp folder and all files included
             Console.WriteLine("Deleting temp folder");
             string tempFolder = Path.Combine(Globals.OutputFolder, "temp");
             try
