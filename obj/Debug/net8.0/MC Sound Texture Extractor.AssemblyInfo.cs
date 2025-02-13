@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MC Sound Texture Extractor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10a485df97605d5f8a4cd4b5f1e24dcf7a846f10")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9f9e8813debaca80ea4afd3fcf73073cee3b3ce")]
 [assembly: System.Reflection.AssemblyProductAttribute("MC Sound Texture Extractor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MC Sound Texture Extractor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
